@@ -267,12 +267,20 @@ screens as wide as 768 pixels and above.
   }
 
   /* form - radio field */
+  .radio-option .radio-input {
+    transform: translateY(6.5px);
+  }
+
   .radio-option .radio-label {
     font-size: 14px;
     line-height: 2;
   }
 
   /* form - checkbox field */
+  .checkbox-option .checkbox-input {
+    transform: translateY(6.5px);
+  }
+
   .checkbox-option .checkbox-label {
     font-size: 14px;
     line-height: 2;

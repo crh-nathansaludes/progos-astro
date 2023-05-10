@@ -728,11 +728,16 @@ a {
 /* form - radio field */
 .field-block .radio-option {
   display: flex;
+  align-items: flex-start;
   gap: 10px;
 }
 
 .field-block > .radio-option + .radio-option {
   margin-top: 4px;
+}
+
+.radio-option .radio-input {
+  transform: translateY(4.5px);
 }
 
 .radio-option .radio-label {
@@ -745,11 +750,16 @@ a {
 /* form - checkbox field */
 .field-block .checkbox-option {
   display: flex;
+  align-items: flex-start;
   gap: 10px;
 }
 
 .field-block.center .checkbox-option {
   justify-content: center;
+}
+
+.checkbox-option .checkbox-input {
+  transform: translateY(4.5px);
 }
 
 .checkbox-option .checkbox-label {
