@@ -983,6 +983,7 @@ a {
 .link-button[data-type="cv"] {
   color: var(--color-white);
   background-color: var(--color-orange);
+  border: none;
 }
 
 .link-button[data-type="cv"]::after {
