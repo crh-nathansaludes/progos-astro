@@ -2,9 +2,15 @@
 import Alert from "../../components/Alert.astro";
 import Annotation from "../../components/Annotation.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
-import LinkButton from "../../components/LinkButton.astro";
 import Card from "../../components/Card.astro";
 import Footer from "../../components/Footer.astro";
+import CheckboxField from "../../components/Form/CheckboxField";
+import Form from "../../components/Form/Form";
+import FormGroup from "../../components/Form/FormGroup";
+import MultiCheckboxField from "../../components/Form/MultiCheckboxField";
+import MultiRadioField from "../../components/Form/MultiRadioField";
+import SubmitButton from "../../components/Form/SubmitButton";
+import TextField from "../../components/Form/TextField.jsx";
 import FullWidthImage from "../../components/FullWidthImage.astro";
 import H2 from "../../components/H2.astro";
 import H3 from "../../components/H3.astro";
@@ -12,7 +18,10 @@ import H4 from "../../components/H4.astro";
 import H5 from "../../components/H5.astro";
 import H6 from "../../components/H6.astro";
 import Header from "../../components/Header.astro";
+import Highlight from "../../components/Highlight.astro";
+import HorizontalTable from "../../components/HorizontalTable.astro";
 import LeadText from "../../components/LeadText.astro";
+import LinkButton from "../../components/LinkButton.astro";
 import Main from "../../components/Main.astro";
 import Menu from "../../components/Menu.astro";
 import NarrowImage from "../../components/NarrowImage.astro";
@@ -20,9 +29,7 @@ import PageTitle from "../../components/PageTitle.astro";
 import PageTitleSub from "../../components/PageTitleSub.astro";
 import Section from "../../components/Section.astro";
 import TextLink from "../../components/TextLink.astro";
-import HorizontalTable from "../../components/HorizontalTable.astro";
 import TwoDimensionalTable from "../../components/TwoDimensionalTable.astro";
-import Highlight from "../../components/Highlight.astro";
 import TODO from "../../components/__TODO.astro";
 ---
 
@@ -227,8 +234,63 @@ import TODO from "../../components/__TODO.astro";
         </div>
         <div class="my-80px">
           <H3>フォーム</H3>
+          <Form>
+            <FormGroup heading="氏名" cols="2">
+              <TextField label="姓" placeholder="例）山田" required />
+              <TextField label="名" placeholder="例）太郎" required />
+              <TextField label="セイ" placeholder="例）ヤマダ" required />
+              <TextField label="メイ" placeholder="例）タロウ" required />
+            </FormGroup>
+            <FormGroup heading="連絡先">
+              <TextField label="Eメール" type="email" placeholder="例）sample@mail.com" length="long" required />
+              <TextField label="電話番号" placeholder="例）08012345678" length="half" required />
+            </FormGroup>
+            <FormGroup heading="住所">
+              <TextField label="郵便番号" placeholder="例）1111111" length="short" required />
+              <TextField label="都道府県" placeholder="選択してください" length="half" required />
+              <TextField label="市区郡町村" placeholder="新宿区西新宿" required />
+              <TextField label="丁目・番地" placeholder="例）6丁目 7番地" required />
+              <TextField label="建物名" placeholder="例）○○○ビル 3F" />
+            </FormGroup>
+            <FormGroup heading="アンケート">
+              <MultiRadioField
+                label="テキストが入りますテキストが入ります"
+                name="hello"
+                options={[
+                  { value: 1, label: "テキストが入りますテキストが入ります" },
+                  { value: 2, label: "テキストが入りますテキストが入ります" },
+                  { value: 3, label: "テキストが入りますテキストが入ります" },
+                  { value: "others", label: "その他" }
+                ]}
+              />
+              <TextField
+                annotation="その他を選択された方は、その理由もご記入ください。"
+                placeholder="こちらにご記入ください。"
+              />
+              <MultiCheckboxField
+                label="テキストが入りますテキストが入ります"
+                options={[
+                  { value: 1, name: "mcb-1", label: "テキストが入りますテキストが入ります" },
+                  { value: 2, name: "mcb-2", label: "テキストが入りますテキストが入ります" },
+                  { value: 3, name: "mcb-3", label: "テキストが入りますテキストが入ります" },
+                  { value: 4, name: "mcb-4", label: "テキストが入りますテキストが入ります" },
+                ]}
+              />
+              <TODO text="Image Upload Field" />
+              <CheckboxField
+                label="個人情報保護方針に同意する"
+                name="privacy-policy"
+                value="privacy-policy"
+                alignment="center"
+              />
+              <SubmitButton label="回答を送信する" />
+            </FormGroup>
+          </Form>
         </div>
       </div>
+    </Section>
+    <Section>
+
     </Section>
   </Main>
   <!-- footer content -->
