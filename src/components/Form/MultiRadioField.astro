@@ -1,0 +1,40 @@
+---
+import RadioOption from "./RadioOption.astro";
+
+export interface Props {
+  label:string;
+  annotation?: string;
+  name: string;
+  options: { value: any, label: string }[];
+  errorMessage?: string;
+  required?: boolean;
+}
+
+const {
+  label = undefined,
+  annotation = undefined,
+  name,
+  options = [],
+  errorMessage = "必須のフィールドに入力してください。",
+  required = false,
+} = Astro.props;
+---
+
+<div class={`field-block`}>
+  {label && (
+    <p class="field-label">
+      <span class="text">{label}</span>
+      {required ? <span class="badge required">必須</span> : <span class="badge">任意</span>}
+    </p>
+  )}
+  {annotation && (
+    <p class="field-annotation">{annotation}</p>
+  )}
+  {options.length > 0
+    ? (options.map(({ value, label }) => (
+      <RadioOption type="radio" value={value} name={name}>{label}</RadioOption>
+    )))
+    : (<span class="text-alert">(No options listed)</span>)
+  }
+  <span class="error-message">{errorMessage}</span>
+</div>

@@ -1,0 +1,10 @@
+---
+const { cols = 1, heading } = Astro.props;
+---
+
+<div class="form-group" data-cols={cols}>
+  <legend class="heading">{heading}</legend>
+  <fieldset>
+    <slot />
+  </fieldset>
+</div>

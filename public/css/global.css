@@ -1005,6 +1005,6 @@ a {
 }
 
 /* form - form group */
-.form-group[cols="2"] fieldset {
+.form-group[data-cols="2"] fieldset {
   grid-template-columns: 1fr 1fr;
 }

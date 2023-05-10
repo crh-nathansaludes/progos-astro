@@ -1,0 +1,21 @@
+---
+export interface Option {
+  name: string;
+  value: string;
+}
+
+const { name, value } = Astro.props;
+---
+
+<label class="radio-option" for={value}>
+  <input
+    class="radio-input"
+    type="radio"
+    id={value}
+    value={value}
+    name={name}
+  />
+  <span class="radio-label">
+    <slot />
+  </span>
+</label>

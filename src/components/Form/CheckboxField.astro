@@ -1,0 +1,27 @@
+---
+import CheckboxOption from "./CheckboxOption.astro";
+
+export interface Props {
+  label: string;
+  name: string;
+  value: string;
+  required?: boolean;
+  errorMessage?: string;
+  alignment?: "left" | "center" | "right";
+}
+
+const {
+  label,
+  name,
+  value,
+  required = false,
+  errorMessage = "必須のフィールドに入力してください。",
+  alignment = "",
+} = Astro.props;
+---
+
+<div class={`field-block ${alignment}`}>
+  <CheckboxOption type="checkbox" value={value} name={name}>
+    {label}
+  </CheckboxOption>
+</div>

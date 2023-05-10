@@ -1,0 +1,12 @@
+---
+export interface Props {
+  label: string,
+  alignment?: "left" | "center" | "right";
+}
+
+const { label, alignment = "center" } = Astro.props;
+---
+
+<div class="field-block">
+  <button class={`button submit-button${alignment && ` ${alignment}`}`} type="submit">{label}</button>
+</div>
