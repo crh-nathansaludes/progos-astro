@@ -1,0 +1,242 @@
+---
+import Alert from "../../components/Alert.astro";
+import Annotation from "../../components/Annotation.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import LinkButton from "../../components/LinkButton.astro";
+import Card from "../../components/Card.astro";
+import Footer from "../../components/Footer.astro";
+import FullWidthImage from "../../components/FullWidthImage.astro";
+import H2 from "../../components/H2.astro";
+import H3 from "../../components/H3.astro";
+import H4 from "../../components/H4.astro";
+import H5 from "../../components/H5.astro";
+import H6 from "../../components/H6.astro";
+import Header from "../../components/Header.astro";
+import LeadText from "../../components/LeadText.astro";
+import Main from "../../components/Main.astro";
+import Menu from "../../components/Menu.astro";
+import NarrowImage from "../../components/NarrowImage.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import PageTitleSub from "../../components/PageTitleSub.astro";
+import Section from "../../components/Section.astro";
+import TextLink from "../../components/TextLink.astro";
+import HorizontalTable from "../../components/HorizontalTable.astro";
+import TwoDimensionalTable from "../../components/TwoDimensionalTable.astro";
+import Highlight from "../../components/Highlight.astro";
+import TODO from "../../components/__TODO.astro";
+---
+
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROGOS | Elements</title>
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/global.mobile-md.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="index.mobile-md.css">
+</head>
+<body>
+  <!-- header content -->
+  <Header />
+  <!-- main content -->
+  <Main>
+    <Alert>
+      アラート：テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
+    </Alert>
+    <Menu />
+    <Breadcrumbs />
+    <PageTitle>ページタイトル（H1）</PageTitle>
+    <PageTitleSub>
+      <span slot="title">第3階層ページタイトル（H1）</span>
+      <span slot="subtitle">補助テキスト</span>
+    </PageTitleSub>
+    <Section>
+      <LeadText>
+        これはリード文です。H1の階層にのみ使用します。GFDLの対象でさて、公式た既存を-満たすがは以下32一方107の制度に自らし適法にあるといいれているところ、被取り扱いもその要素にさなけれ。上の記事を認めこととして演説毎が防止あるませ引用をしたて、関係物例物を考慮するんことはさと.なられない。
+      </LeadText>
+      <H2>サブタイトル（H2）</H2>
+      <p>
+        これは通常テキストです。事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。プロジェクト趣旨や被引用ルールを重要に削除満たすます場合、お編集文の引用かもはで本文事前で要求従っれていものと要求できれ本これらに基づく。
+      </p>
+      <H2>サブタイトル（H2）</H2>
+      <p>
+        これは通常テキストです。事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。プロジェクト趣旨や被引用ルールを重要に削除満たすます場合、お編集文の引用かもはで本文事前で要求従っれていものと要求できれ本これらに基づく。
+      </p>
+      <H3>見出し（H3）</H3>
+      <p>
+        これは通常テキストです。以下の誰かに要求得る場合も、引用として、規定の下が場合できれように認定するます。「本要件の目的がし投稿権」が「表示の財団」をすること危うく著作しれです全部、削除できるれん歌詞は記事による転載プロジェクトとしです。しかし、配信について引用に可能でしょすべては認めて、必ず引用即してください。場合の投稿を可能ます場合も、GFDL許諾執筆版問題区別補足の人に著作含ま、公表がなるれ付たり、これらがどこを列挙しれですかを関係さてい。
+      </p>
+      <H4>見出し（H4）</H4>
+      <p>
+        これは通常テキストです。事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。プロジェクト趣旨や被引用ルールを重要に削除満たすます場合、お編集文の引用かもはで本文事前で要求従っれていものと要求できれ本これらに基づく。
+      </p>
+      <H5>見出し（H5）</H5>
+      <p>
+        これは通常テキストです。十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。これの引用内容としれるたますとしては、仮にそのDocumentationを違反記事にしのはありますますて、台詞物をの引用で方針に合意するためからも提出よれがいるありプライバシーで。
+      </p>
+      <H6>見出し（H6）</H6>
+      <p>
+        これは通常テキストです。以下の誰かに要求得る場合も、引用として、規定の下が場合できれように認定するます。「本要件の目的がし投稿権」が「表示の財団」をすること危うく著作しれです全部、削除できるれん歌詞は記事による転載プロジェクトとしです。しかし、配信について引用に可能でしょすべては認めて、必ず引用即してください。場合の投稿を可能ます場合も、GFDL許諾執筆版問題区別補足の人に著作含ま、公表がなるれ付たり、これらがどこを列挙しれですかを関係さてい。
+      </p>
+      <p>
+        作家に担保行わ、執筆必要物を利用できるによって記事の著作原則上も適法り。投稿は、判断物、メディアなどが要約して利用従っことがペディア的あれ。表現文章の例について、手段ですですて理事国、文のコンテンツ、有償のペディアとフェア権やShareAlike名、疑義、決議法など、ファイルますだて枠組み、原則文、CC、<a href="#">文中リンク：削除者かもとするれる</a>ます。以下の誰かに要求得る場合も、引用として、規定の下が場合できれように認定するます。「本要件の目的がし投稿権」が「表示の財団」をすること危うく<a class="text-cv" href="#">強調テキスト：著作しれです全部、削除できる</a>れん歌詞は記事による転載プロジェクトとしです。しかし、配信について引用に可能でしょすべては認めて、必ず引用即してください。場合の投稿を可能ます場合も、<span class="text-alert">注意文：GFDL許諾執筆版問題区別補足の人</span>に著作含ま、公表がなるれ付たり、これらがどこを列挙しれですかを関係さてい。事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。</p>
+      <Annotation>
+        注釈テキスト：プロジェクト趣旨や被引用ルールを重要に削除満たすます場合
+      </Annotation>
+    </Section>
+    <Section>
+      <div id="sample-container:links">
+        <TextLink href="#" type="default">テキストリンク</TextLink>
+        <TextLink href="#" type="new-window">別窓リンク</TextLink>
+        <TextLink href="#" type="pdf">PDFリンク</TextLink>
+      </div>
+    </Section>
+    <Section>
+      <TODO text="<Bullet Points>" />
+    </Section>
+    <Section>
+      <H3>カラム</H3>
+      <div class="[ row ][ max-w-694px mx-auto ]">
+        <Card>
+          <NarrowImage
+            slot="image"
+            image="img_narrow-sample-image.jpg"
+            alt_text="sample narrow image"
+          />
+          <p>事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。</p>
+        </Card>
+      </div>
+      <div class="row">
+        <Card>
+          <FullWidthImage
+            slot="image"
+            image="img_full-w-sample-image.jpg"
+            alt_text="full width image"
+          />
+          <p>事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。</p>
+        </Card>
+      </div>
+      <div class="row cols-2">
+        {[1,2].map(() => (
+          <Card>
+            <img class="image" slot="image" src="/images/img_blank.jpg" alt="blank image" />
+            <p>事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、</p>
+          </Card>
+        ))}
+      </div>
+      <div class="row cols-3">
+        {[1,2,3].map(() => (
+          <Card>
+            <img class="image" slot="image" src="/images/img_blank.jpg" alt="blank image" />
+            <p>事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から</p>
+          </Card>
+        ))}
+      </div>
+      <div class="row cols-4">
+        {[1,2,3,4].map(() => (
+          <Card>
+            <img class="image small" slot="image" src="/images/img_blank.jpg" alt="blank image" />
+            <p>事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する</p>
+          </Card>
+        ))}
+      </div>
+      <div class="row">
+        <Card image_position="right">
+          <img class="image" slot="image" src="/images/img_blank.jpg" alt="blank image" />
+          <p>十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。これの引用内容としれるたますとしては、仮にそのDocumentationを違反記事にしのはありますますて、台詞物をの引用で方針に合意するためからも提出よれがいるありプライバシーで。作家に担保行わ、執筆必要物を利用できるによって記事の著作原則上も適法り。投稿は、判断物、メディアなどが要約して利用従っことがペディア的あれ。表現文章の例について、手段ですですて理事国、文のコンテンツ、有償のペディアとフェア権やShareAlike名、疑義、決議法など、ファイルますだて枠組み、原則</p>
+        </Card>
+      </div>
+      <div class="row">
+        <Card image_position="left">
+          <img class="image" slot="image" src="/images/img_blank.jpg" alt="blank image" />
+          <p>事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。プロジェクト趣旨や被引用ルールを重要に削除満たすます場合、お編集文の引用かもはで本文事前で要求従っれていものと要求できれ本これらに基づく。十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。これの引用内容としれるたますとしては、仮にそのDocumentationを違反記事にしのはありますますて、台詞物をの引用で方針に合意するためからも提出よれがいるありプライバシーで。</p>
+        </Card>
+      </div>
+    </Section>
+    <Section>
+      <div id="sample-container:button-stack" class="mx-auto">
+        <div class="cols-1">
+          <LinkButton text="ボタン" href="#" />
+          <LinkButton text="CVボタン" type="cv" href="#" />
+          <LinkButton text="別窓ボタン" type="new-window" href="#" />
+        </div>
+        <div class="cols-2">
+          <LinkButton text="並びボタン" href="#" />
+          <LinkButton text="並びボタン" href="#" />
+        </div>
+      </div>
+    </Section>
+    <Section>
+      <H3>テーブル</H3>
+      <HorizontalTable />
+      <TwoDimensionalTable />
+    </Section>
+    <Section>
+      <H3>リンク集</H3>
+      <TODO text="<Link Collection>" />
+    </Section>
+    <Section>
+      <H3>囲み文字</H3>
+      <Highlight>
+        囲み文字：十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。
+      </Highlight>
+      <Highlight title="囲み文字タイトル">
+        囲み文字：十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。
+      </Highlight>
+    </Section>
+    <Section>
+      <div class="narrow mx-auto">
+        <H2>サブタイトル（H2）</H2>
+        <p>
+          これは通常テキストです。事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。
+        </p>
+        <H2>サブタイトル（H2）</H2>
+        <p>
+          これは通常テキストです。十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。これの引用内容としれるたますとしては、仮にそのDocumentationを違反記事にしのはありますますて
+        </p>
+        <H3>見出し（H3）</H3>
+        <p>
+          これは通常テキストです。以下の誰かに要求得る場合も、引用として、規定の下が場合できれように認定するます。「本要件の目的がし投稿権」が「表示の財団」をすること危うく著作しれです全部、削除できるれん歌詞は記事による転載プロジェクトとしです。しかし、配信について引用に可能でしょすべては認めて、必ず引用即してください。
+        </p>
+        <H4>見出し（H4）</H4>
+        <p>
+          これは通常テキストです。事項投稿とも、記事Freeを方針に投稿する、被引用文を言語原則の例から著作引用する、あるいはその学問、参考要件を補足なりなど、作家規律における被投稿理由に下License的なプロジェクトをできてください決議が認めある。
+        </p>
+        <H5>見出し（H5）</H5>
+        <p>
+          これは通常テキストです。十分コンテンツを認めれてくださいでしょその後の対応のライセンスは、本文章をできて許諾することをさな。「利用の作家」とさ侵害を作る全部あっないからは、以下のものに発揮作るてい。これの引用内容としれるたますとしては
+        </p>
+        <H6>見出し（H6）</H6>
+        <p>
+          これは通常テキストです。以下の誰かに要求得る場合も、引用として、規定の下が場合できれように認定するます。「本要件の目的がし投稿権」が「表示の財団」をすること危うく著作しれです全部、削除できるれん歌詞は記事による転載プロジェクトとしです。しかし、配信について引用に可能でしょすべては認めて、必ず引用即してください。
+        </p>
+        <div class="my-80px">
+          <H3>テーブル</H3>
+          <HorizontalTable />
+          <TwoDimensionalTable />
+          <TODO text="<One Dimensional Table>" />
+        </div>
+        <div class="my-80px">
+          <H3>リンク集</H3>
+          <TODO text="<Link Collection>" />
+        </div>
+        <div class="my-80px">
+          <H3>フォーム</H3>
+        </div>
+      </div>
+    </Section>
+  </Main>
+  <!-- footer content -->
+  <Footer />
+
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- main script -->
+  <script src="/js/index.js" defer />
+</body>
+</html>

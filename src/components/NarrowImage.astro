@@ -1,0 +1,10 @@
+---
+export interface Props {
+  image: string;
+  alt_text?: string;
+}
+
+const { image, alt_text } = Astro.props;
+---
+
+<img class="narrow-image" src={`/images/${image}`} alt={alt_text ?? ""} />

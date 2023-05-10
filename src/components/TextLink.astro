@@ -1,0 +1,12 @@
+---
+export interface Props {
+  href: string;
+  type: "default" | "new-window" | "pdf";
+}
+
+const { href, type } = Astro.props;
+---
+
+<a class="text-link" data-type={type} href={href} rel="noopener noreferrer" target="_blank">
+  <span class="title"><slot /></span>
+</a>
