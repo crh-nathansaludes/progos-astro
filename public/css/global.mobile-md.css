@@ -295,6 +295,22 @@ screens as wide as 768 pixels and above.
     align-self: flex-end;
   }
 
+  /* points */
+  .points .point {
+    flex-direction: row;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+  }
+
+  .points .point .point-content {
+    margin: 0;
+  }
+
+  .points .point .point-image {
+    max-width: 320px;
+  }
+
   /* footer */
   .footer .container-1 .group-1 .accordion {
     position: relative;
