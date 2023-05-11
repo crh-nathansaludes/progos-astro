@@ -1,13 +1,14 @@
 ---
 export interface Props {
   columns?: number;
+  gap?: number;
 }
 
 const getClass = (cols) => {
   return cols > 1 ? " cols-" + cols : "";
 }
 
-const { columns = 1 } = Astro.props;
+const { columns = 1, gap } = Astro.props;
 ---
 
 <div class={"row" + getClass(columns)}>

@@ -1,0 +1,44 @@
+---
+export interface Props {
+  label: string;
+  annotation?: string;
+  name: string;
+  required?: boolean;
+  errorMessage?: string;
+}
+
+const {
+  label = undefined,
+  annotation = undefined,
+  name = undefined,
+  required = false,
+  errorMessage = "必須のフィールドに入力してください。",
+} = Astro.props;
+---
+
+<div class="field-block">
+  {
+    label && (
+      <label class="field-label" for={name}>
+        <span class="text">{label}</span>
+        {required ? (
+          <span class="badge required">必須</span>
+        ) : (
+          <span class="badge">任意</span>
+        )}
+      </label>
+    )
+  }
+  {annotation && <p class="field-annotation">{annotation}</p>}
+  <label class="file-upload" for={name}>
+    <input
+      type="file"
+      id={name}
+      name={name}
+      required={required}
+    />
+    <span role="button" class="button">ファイルを選択</span>
+    <span class="file-name">image.jpg</span>
+  </label>
+  <span class="error-message">{errorMessage}</span>
+</div>

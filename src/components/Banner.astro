@@ -1,0 +1,9 @@
+---
+export interface Props {
+  large?: boolean;
+}
+
+const { large = false } = Astro.props;
+---
+
+<img class:list={["banner", { "large": large }]}  src="/images/img_blank.jpg" alt="sample banner" />

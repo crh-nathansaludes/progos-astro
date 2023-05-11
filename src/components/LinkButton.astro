@@ -8,6 +8,6 @@ export interface Props {
 const { text, href, type } = Astro.props;
 ---
 
-<a class="link-button" data-type={type} href={href} target="_blank">
+<a class="button link-button" data-type={type} href={href} target="_blank">
   <span class="text">{text}</span>
 </a>

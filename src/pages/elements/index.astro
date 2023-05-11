@@ -1,16 +1,12 @@
 ---
 import Alert from "../../components/Alert.astro";
 import Annotation from "../../components/Annotation.astro";
+import Banner from "../../components/Banner.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Card from "../../components/Card.astro";
+import Divider from "../../components/Divider.astro";
+import Form from "../../components/Elements/Form.astro";
 import Footer from "../../components/Footer.astro";
-import CheckboxField from "../../components/Form/CheckboxField.astro";
-import Form from "../../components/Form/Form.astro";
-import FormGroup from "../../components/Form/FormGroup.astro";
-import MultiCheckboxField from "../../components/Form/MultiCheckboxField.astro";
-import MultiRadioField from "../../components/Form/MultiRadioField.astro";
-import SubmitButton from "../../components/Form/SubmitButton.astro";
-import TextField from "../../components/Form/TextField.astro";
 import H2 from "../../components/H2.astro";
 import H3 from "../../components/H3.astro";
 import H4 from "../../components/H4.astro";
@@ -278,66 +274,63 @@ import TODO from "../../components/__TODO.astro";
         </div>
         <div class="my-80px">
           <H3>フォーム</H3>
-          <Form>
-            <FormGroup heading="氏名" cols="2">
-              <TextField label="姓" placeholder="例）山田" required />
-              <TextField label="名" placeholder="例）太郎" required />
-              <TextField label="セイ" placeholder="例）ヤマダ" required />
-              <TextField label="メイ" placeholder="例）タロウ" required />
-            </FormGroup>
-            <FormGroup heading="連絡先">
-              <TextField label="Eメール" type="email" placeholder="例）sample@mail.com" length="long" required />
-              <TextField label="電話番号" placeholder="例）08012345678" length="half" required />
-            </FormGroup>
-            <FormGroup heading="住所">
-              <TextField label="郵便番号" placeholder="例）1111111" length="short" required />
-              <TextField label="都道府県" placeholder="選択してください" length="half" required />
-              <TextField label="市区郡町村" placeholder="新宿区西新宿" required />
-              <TextField label="丁目・番地" placeholder="例）6丁目 7番地" required />
-              <TextField label="建物名" placeholder="例）○○○ビル 3F" />
-            </FormGroup>
-            <FormGroup heading="アンケート">
-              <MultiRadioField
-                label="テキストが入りますテキストが入ります"
-                name="hello"
-                options={[
-                  { value: 1, label: "テキストが入りますテキストが入ります" },
-                  { value: 2, label: "テキストが入りますテキストが入ります" },
-                  { value: 3, label: "テキストが入りますテキストが入ります" },
-                  { value: "others", label: "その他" }
-                ]}
-              />
-              <TextField
-                annotation="その他を選択された方は、その理由もご記入ください。"
-                placeholder="こちらにご記入ください。"
-              />
-              <MultiCheckboxField
-                label="テキストが入りますテキストが入ります"
-                options={[
-                  { value: 1, name: "mcb-1", label: "テキストが入りますテキストが入ります" },
-                  { value: 2, name: "mcb-2", label: "テキストが入りますテキストが入ります" },
-                  { value: 3, name: "mcb-3", label: "テキストが入りますテキストが入ります" },
-                  { value: 4, name: "mcb-4", label: "テキストが入りますテキストが入ります" },
-                ]}
-              />
-              <TODO text="Image Upload Field" />
-              <CheckboxField
-                label="個人情報保護方針に同意する"
-                name="privacy-policy"
-                value="privacy-policy"
-                alignment="center"
-              />
-              <SubmitButton label="回答を送信する" />
-            </FormGroup>
-          </Form>
+          <Form />
         </div>
       </Narrow>
     </Section>
     <Section>
-      <TODO text="Banners" />
+      <div id="sample-container:3-banner">
+        <Banner />
+        <Banner />
+        <Banner />
+      </div>
+    </Section>
+    <Section>
+      <Banner large />
     </Section>
     <Section>
       <Points />
+    </Section>
+    <Section>
+      <TODO text="Steps (5 items)" />
+    </Section>
+    <Section>
+      <TODO text="Steps (7 items)" />
+    </Section>
+    <Section>
+      <TODO text="FAQ Accordion" />
+    </Section>
+    <Section>
+      <TODO text="Card w/ CTA Button" />
+    </Section>
+    <Section>
+      <Divider>
+        <div class="mx-15px">
+          <H6>お話をうかがった方</H6>
+          <p>
+            EXCECTIVE Officer　汾陽（かわみなみ） 祥太 様（導入責任者様<br />
+            Relationship Development Office Division Manager　中島 義雄 様（受講者様
+          </p>
+        </div>
+      </Divider>
+    </Section>
+    <Section>
+      <TODO text="Main Point" />
+    </Section>
+    <Section>
+      <TODO text="Company Profile" />
+    </Section>
+    <Section>
+      <TODO text="List (Recommendations)" />
+    </Section>
+    <Section>
+      <TODO text="Speakers" />
+    </Section>
+    <Section>
+      <TODO text="Tabs" />
+    </Section>
+    <Section>
+      <TODO text="Pagination" />
     </Section>
   </Main>
   <!-- footer content -->

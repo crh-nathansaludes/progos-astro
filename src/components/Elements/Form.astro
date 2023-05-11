@@ -1,0 +1,63 @@
+---
+import CheckboxField from "../Form/CheckboxField.astro";
+import FormGroup from "../Form/FormGroup.astro";
+import MultiCheckboxField from "../Form/MultiCheckboxField.astro";
+import MultiRadioField from "../Form/MultiRadioField.astro";
+import SubmitButton from "../Form/SubmitButton.astro";
+import TextField from "../Form/TextField.astro";
+import TODO from "../__TODO.astro";
+import Form from "../Form/Form.astro";
+import FileUploadField from "../Form/FileUploadField.astro";
+---
+<Form>
+  <FormGroup heading="氏名" cols="2">
+    <TextField label="姓" placeholder="例）山田" required />
+    <TextField label="名" placeholder="例）太郎" required />
+    <TextField label="セイ" placeholder="例）ヤマダ" required />
+    <TextField label="メイ" placeholder="例）タロウ" required />
+  </FormGroup>
+  <FormGroup heading="連絡先">
+    <TextField label="Eメール" type="email" placeholder="例）sample@mail.com" length="long" required />
+    <TextField label="電話番号" placeholder="例）08012345678" length="half" required />
+  </FormGroup>
+  <FormGroup heading="住所">
+    <TextField label="郵便番号" placeholder="例）1111111" length="short" required />
+    <TextField label="都道府県" placeholder="選択してください" length="half" required />
+    <TextField label="市区郡町村" placeholder="新宿区西新宿" required />
+    <TextField label="丁目・番地" placeholder="例）6丁目 7番地" required />
+    <TextField label="建物名" placeholder="例）○○○ビル 3F" />
+  </FormGroup>
+  <FormGroup heading="アンケート">
+    <MultiRadioField
+      label="テキストが入りますテキストが入ります"
+      name="hello"
+      options={[
+        { value: 1, label: "テキストが入りますテキストが入ります" },
+        { value: 2, label: "テキストが入りますテキストが入ります" },
+        { value: 3, label: "テキストが入りますテキストが入ります" },
+        { value: "others", label: "その他" }
+      ]}
+    />
+    <TextField
+      annotation="その他を選択された方は、その理由もご記入ください。"
+      placeholder="こちらにご記入ください。"
+    />
+    <MultiCheckboxField
+      label="テキストが入りますテキストが入ります"
+      options={[
+        { value: 1, name: "mcb-1", label: "テキストが入りますテキストが入ります" },
+        { value: 2, name: "mcb-2", label: "テキストが入りますテキストが入ります" },
+        { value: 3, name: "mcb-3", label: "テキストが入りますテキストが入ります" },
+        { value: 4, name: "mcb-4", label: "テキストが入りますテキストが入ります" },
+      ]}
+    />
+    <FileUploadField label="画像アップロード" name="image-upload" />
+    <CheckboxField
+      label="個人情報保護方針に同意する"
+      name="privacy-policy"
+      value="privacy-policy"
+      alignment="center"
+    />
+    <SubmitButton label="回答を送信する" />
+  </FormGroup>
+</Form>
