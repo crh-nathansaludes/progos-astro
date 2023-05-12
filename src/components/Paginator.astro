@@ -1,0 +1,15 @@
+---
+const pages = [1, 2, 3, 4, 5];
+---
+
+<div class="pagination">
+  <a href="#" class="pagination-button previous"></a>
+  {
+    pages.map((value, index) => (
+      <a href="#" class:list={["pagination-button page-index", { active: (index === 2) }]}>
+        {value}
+      </a>
+    ))
+  }
+  <a href="#" class="pagination-button next"></a>
+</div>

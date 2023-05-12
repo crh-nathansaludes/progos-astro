@@ -10,6 +10,7 @@ For styles that apply to device screen widths from
   /* primary colors */
   --color-orange: #DE7A00;
   --color-blue: #519CCC;
+  --color-green: #0093A7;
 
   /* gradients */
   --color-gr-main: linear-gradient(90deg, #0070BA 0%, #00A68D 100%, #00A68D 100%);
@@ -875,6 +876,44 @@ p {
 
 .banner.large {
   height: 180px;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pagination .pagination-button {
+  flex-shrink: 0;
+  outline: 1px solid var(--color-line-gray);
+  background-color: var(--color-white);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.75;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  width: 34px;
+  border-radius: 4px;
+}
+
+.pagination .pagination-button.active {
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.pagination > .pagination-button.previous::after {
+  content: url(/images/icon-double-caret-left.svg);
+}
+
+.pagination > .pagination-button.next::after {
+  content: url(/images/icon-double-caret-right.svg);
 }
 
 /* footer */
