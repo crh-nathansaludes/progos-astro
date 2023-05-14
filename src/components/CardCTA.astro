@@ -1,0 +1,17 @@
+---
+import ButtonLink from "./ButtonLink.astro";
+const { heading, image = "img_blank.jpg" } = Astro.props;
+---
+
+<div class="card-cta">
+  <div class="content">
+    <div class="text-content">
+      <span class="heading">{heading}</span>
+      <slot />
+    </div>
+    <img class="image" src={`/images/${image}`} alt="Sample image for Card CTA">
+  </div>
+  <div class="button-slot">
+    <ButtonLink href="#" text="詳しくはこちら" type={"new-window"} icon="copy" />
+  </div>
+</div>
